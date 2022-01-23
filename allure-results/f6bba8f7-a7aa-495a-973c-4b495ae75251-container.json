@@ -1,0 +1,1 @@
+{"uuid":"f6bba8f7-a7aa-495a-973c-4b495ae75251","name":"Regression Suite","children":["34dd3348-0848-419f-828a-df387f5eb1ee"],"befores":[],"afters":[{"name":"afterClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1641742104180,"stop":1641742104287}],"start":1641742076574,"stop":1641742104287}

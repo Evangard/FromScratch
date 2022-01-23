@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static config.Browser.*;
-
 public class HomePage extends AbstractPage{
 
     @FindBy(xpath = "//a[@class='ico-account']")
@@ -18,4 +16,6 @@ public class HomePage extends AbstractPage{
     public boolean isUserLoggedIn() {
         return personAccountLink.isDisplayed();
     }
+
+
 }

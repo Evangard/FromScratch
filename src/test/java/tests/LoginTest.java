@@ -22,4 +22,9 @@ public class LoginTest extends AbstractTest {
         Assert.assertTrue(homePage.isUserLoggedIn(), "Login is failed.");
     }
 
+    @Test(priority = 1)
+    public void testLogin2() {
+        homePage = loginPage.login("anton.mikolaenko@gmail.com", "FromScratch");
+        Assert.assertTrue(homePage.isUserLoggedIn(), "Login is failed.");
+    }
 }

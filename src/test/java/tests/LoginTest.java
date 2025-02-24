@@ -17,13 +17,13 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test
-    public void testLogin() {
+    public void happyPass() {
         homePage = loginPage.login("anton.mikolaenko@gmail.com", "FromScratch");
         Assert.assertTrue(homePage.isUserLoggedIn(), "Login is failed.");
     }
 
     @Test(priority = 1)
-    public void testLogin2() {
+    public void unHappyPass() {
         homePage = loginPage.login("anton.mikolaenko@gmail.com", "FromScratch");
         Assert.assertTrue(homePage.isUserLoggedIn(), "Login is failed.");
     }

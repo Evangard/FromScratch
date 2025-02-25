@@ -17,5 +17,7 @@ public class HomePage extends AbstractPage{
         return personAccountLink.isDisplayed();
     }
 
-
+    public boolean isPersonAccountLink() {
+        return personAccountLink.isDisplayed();
+    }
 }

@@ -21,4 +21,9 @@ public class HomeTest extends AbstractTest{
         homePage = loginPage.login("anton.mikolaenko@gmail.com", "FromScratch");
         Assert.assertTrue(homePage.isUserLoggedIn(), "Login is failed.");
     }
+
+    @Test(dependsOnMethods = "checkHomePage")
+    public void checkPersonAccountLink() {
+        Assert.assertTrue(homePage.isPersonAccountLink(), "Person account link should be shown.");
+    }
 }

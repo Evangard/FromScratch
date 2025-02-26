@@ -1,18 +1,17 @@
 package pages;
 
-import org.bouncycastle.pqc.crypto.ExchangePair;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends AbstractPage{
 
-    @FindBy(xpath = "//input[@class='email']")
+    @FindBy(id = "login_field")
     private WebElement usernameField;
 
-    @FindBy(xpath = "//input[@class='password']")
+    @FindBy(id = "password")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//div/input[@type='submit']")
+    @FindBy(xpath = "//input[@type='submit']")
     private WebElement submitButton;
 
     public HomePage login(String userName, String password) {

@@ -8,14 +8,13 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.PullRequestPage;
 
-public class LoginTest extends AbstractTest {
+public class GitTest extends AbstractTest {
 
-    private LoginPage loginPage;
     private HomePage homePage;
     private PullRequestPage pullRequestPage;
-    private static final String USER = "Gitguber21";
-    private static final String PASS = "QAZwsx1937q";
-    private static final String PROJECT_NAME = "sore";
+    private static final String USER = "Evangard";
+    private static final String PASS = "Sal_2025";
+    private static final String PROJECT_NAME = "AQACourse";
 
     @BeforeClass
     public void beforeActions() {

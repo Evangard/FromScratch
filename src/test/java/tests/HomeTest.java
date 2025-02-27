@@ -17,16 +17,16 @@ public class HomeTest extends AbstractTest{
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private static final String USER = "Evangard";
-    private static final String PROJECT = "AQA_proj_2";
-    private static final String TOKEN = "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";
+    private static final String USER = "Gitguber21";
+    private static final String PROJECT = "sore";
+    private static final String TOKEN = "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";
     private static Map<String, String> headers = new HashMap<>();
 
     @BeforeClass
     public void beforeActions() {
-        loginPage = AbstractTest.browser.openLoginPage();
-//        headers.put("accept", "*/*");
-//        headers.put("Authorization", String.format("Bearer %s", TOKEN));
+//        loginPage = AbstractTest.browser.openLoginPage();
+        headers.put("accept", "*/*");
+        headers.put("Authorization", String.format("Bearer %s", TOKEN));
     }
 //
 //    @Test
@@ -42,7 +42,7 @@ public class HomeTest extends AbstractTest{
 
     @Test
     public void createIssueTest() {
-        for (int i = 81; i<100; i++) {
+        for (int i = 81; i<105; i++) {
             JSONObject obj = new JSONObject();
             obj.put("title", "Test issue " + i);
             createIssue(obj, headers);
@@ -82,7 +82,7 @@ public class HomeTest extends AbstractTest{
     private HttpResponse<JsonNode> addStar(Map<String, String> headers) {
         HttpResponse<JsonNode> request = null;
         try {
-            request = Unirest.post(String.format("https://api.github.com/user/starred/%s/%s", USER, PROJECT))
+            request = Unirest.put(String.format("https://api.github.com/user/starred/%s/%s", USER, PROJECT))
                     .headers(headers)
                     .asJson();
         } catch (Exception e) {

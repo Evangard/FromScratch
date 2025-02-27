@@ -14,7 +14,7 @@ public class OpenPullRequestPage extends AbstractPage {
     }
 
     public PullRequestPage clickCreatePullRequestButton() {
-        waitUntilElementIsVisible(createPullRequestButton);
+        waitUntilElementIsVisible(createPullRequestButton, 60);
         createPullRequestButton.click();
         return new PullRequestPage();
     }
